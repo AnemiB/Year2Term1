@@ -22,38 +22,42 @@ function Comparison() {
     fetchCharacterDetails();
   }, []);
 
-  const handleCharacterSelection = (character) => {
-    if (!selectedCharacter1) {
-      setSelectedCharacter1(character);
-    } else if (!selectedCharacter2) {
-      setSelectedCharacter2(character);
-    } else {
-      // Reset selections if both characters are already selected
-      setSelectedCharacter1(character);
-      setSelectedCharacter2(null);
-    }
+  const handleCharacterSelection1 = (event) => {
+    const selectedCharacter = event.target.value;
+    setSelectedCharacter1(selectedCharacter);
+  };
+
+  const handleCharacterSelection2 = (event) => {
+    const selectedCharacter = event.target.value;
+    setSelectedCharacter2(selectedCharacter);
   };
 
   return (
     <div className='page' style={{ backgroundColor: '#192536', color: 'white' }}>
-      <div style={{ marginBottom: '20px', display: 'flex', flexDirection: 'row' }}>
-        {characterDetails.map(character => (
-          <label key={character.name} style={{ fontSize: '14px', display: 'block' }}>
-            <input 
-              type="checkbox" 
-              checked={selectedCharacter1 === character || selectedCharacter2 === character} 
-              onChange={() => handleCharacterSelection(character)} 
-            /> 
-            {character.name}
-          </label>
-        ))}
+      <div style={{ marginBottom: '20px' }}>
+        <select onChange={handleCharacterSelection1}>
+          <option value="">Select first character</option>
+          {characterDetails.map(character => (
+            <option key={character.name} value={character.name}>
+              {character.name}
+            </option>
+          ))}
+        </select>
+        <select onChange={handleCharacterSelection2}>
+          <option value="">Select second character</option>
+          {characterDetails.map(character => (
+            <option key={character.name} value={character.name}>
+              {character.name}
+            </option>
+          ))}
+        </select>
       </div>
       {(selectedCharacter1 && selectedCharacter2) ? (
         <>
-          Comparison for {selectedCharacter1.name} vs {selectedCharacter2.name}
-          <PieChart character1={selectedCharacter1.name} character2={selectedCharacter2.name} characterDetails={characterDetails} />
-          <LineChart character1={selectedCharacter1.name} character2={selectedCharacter2.name} characterDetails={characterDetails} />
-          <BarChart character1={selectedCharacter1.name} character2={selectedCharacter2.name} characterDetails={characterDetails} />
+          Comparison for {selectedCharacter1} vs {selectedCharacter2}
+          <PieChart character1={selectedCharacter1} character2={selectedCharacter2} characterDetails={characterDetails} />
+          <LineChart character1={selectedCharacter1} character2={selectedCharacter2} characterDetails={characterDetails} />
+          <BarChart character1={selectedCharacter1} character2={selectedCharacter2} characterDetails={characterDetails} />
         </>
       ) : (
         <div>Please select two characters for comparison.</div>
@@ -63,3 +67,4 @@ function Comparison() {
 }
 
 export default Comparison;
+
