@@ -14,3 +14,8 @@ Comparason page
 Timeline page
 ![3](https://github.com/AnemiB/Year2Term1/assets/125360666/7b5815d6-d5d2-4aff-b8c4-e3d09e9392f4)
 
+
+Photo credit 
+https://www.hoyolab.com/article/7091
+https://za.pinterest.com/pin/953144708608679854/
+
