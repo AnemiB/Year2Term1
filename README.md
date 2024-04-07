@@ -1,4 +1,4 @@
-This is a repo that contains the code for my project in semester 1 of year 2 for DV200
+This is a repo that contains the code for my project in semester 1, term 1 of year 2 for DV200
 
 # Pinterest Board: User Interface
 https://pin.it/6q6mv0WPr
@@ -18,4 +18,11 @@ Timeline page
 https://www.hoyolab.com/article/7091
 https://za.pinterest.com/pin/953144708608679854/
 https://www.polygon.com/reviews/23389752/genshin-impact-2022-review-hoyoverse-mihoyo-anniversary-sumeru
+
+# A few screenshots of the project
+![Screenshot (8960)](https://github.com/AnemiB/Year2Term1/assets/125360666/2ea3ceec-9b23-47c6-ad9b-2fc201d9853a)
+![Screenshot (8961)](https://github.com/AnemiB/Year2Term1/assets/125360666/a40a799c-47e4-4b55-9edf-8d7a69f33396)
+![Screenshot (8962)](https://github.com/AnemiB/Year2Term1/assets/125360666/9f9b99b7-d638-4580-b51e-ac50a0dd7a7a)
+
+
 
